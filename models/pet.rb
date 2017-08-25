@@ -34,11 +34,22 @@ class Pet
     return pets_objects
   end
 
+  def self.delete_all
+    sql = "DELETE * FROM pets;"
+    SqlRunner.run(sql, [])
+  end
+
   def update
     sql = "UPDATE pets SET
     (name, species, breed, age, size, sex, adoptable, admission_date, photo)
     = ($1, $2, $3, $4, $5, $6, $7, $8, $9) WHERE id= $10;"
     values = [@name, @species, @breed, @age, @size, @sex, @adoptable, @admission_date, @photo]
     SqlRunner.run(sql, values)
+  end
+
+  def delete
+    sql = "DELETE FROM pets where id = $1;"
+    value = [@id]
+    SqlRunner.run(sql, value)
   end
 end
