@@ -56,4 +56,10 @@ class Owner
     pet_object = Pet.new(pet_hash.first)
     return pet_object.name
   end
+
+  def adopt(pet)
+    sql = "UPDATE owners SET (pet_id) = $1 WHERE id = $2;"
+    values = [pet.id, @id]
+    SqlRunner.run(sql, values)
+  end
 end
