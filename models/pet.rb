@@ -53,4 +53,12 @@ class Pet
     value = [@id]
     SqlRunner.run(sql, value)
   end
+
+  def self.find(id)
+    sql = "SELECT * FROM pets WHERE id = $1;"
+    value = [id]
+    pet_hash = SqlRunner.run(sql, value)
+    pet_object = Pet.new(pet_hash.first)
+    return pet_object
+  end
 end

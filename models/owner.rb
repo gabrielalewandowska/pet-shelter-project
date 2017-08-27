@@ -62,4 +62,12 @@ class Owner
     values = [pet.id, @id]
     SqlRunner.run(sql, values)
   end
+
+  def self.find(id)
+    sql = "SELECT * FROM owners WHERE id = $1;"
+    value = [id]
+    owner_hash = SqlRunner.run(sql, value)
+    owner_object = Owner.new(owner_hash.first)
+    return owner_object
+  end
 end
