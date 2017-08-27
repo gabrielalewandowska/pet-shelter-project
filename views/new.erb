@@ -1,0 +1,45 @@
+<form action="/animals" method="POST">
+
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name-field"/>
+
+ <label for="species-select">Species:</label>
+  <select id="species-select" name="species">
+    <option value="cat">cat</option>
+    <option value="dog">dog</option>
+  </select>
+
+  <label for="breed-field">Breed:</label>
+   <input id="breed-field" type="text" name="breed">
+
+ <label for="age">Age:</label>
+  <input id="age" type="number" name="age"/>
+
+ <label for="size-select">Size:</label>
+   <select id="size-select" name="size">
+     <option value="small">small</option>
+     <option value="medium">medium</option>
+     <option value="large">large</option>
+ </select>
+
+ <label for="sex-select">Sex:</label>
+   <select id="sex-select" name="sex">
+     <option value="male">male</option>
+     <option value="female">female</option>
+ </select>
+
+ <label for="adoptable-select">Adoptable:</label>
+   <select id="adoptable-select" name="adoptable">
+     <option value="true">yes</option>
+     <option value="false">in training/ vet care</option>
+ </select>
+
+ <label for="admission_date">Admission date:</label>
+  <input id="admission_date" type="text" name="admission_date"/>
+
+  <label for="photo">Photo url:</label>
+   <input id="photo" type="text" name="photo"/>
+
+ <input type="submit" value="Add Record">
+
+</form>
