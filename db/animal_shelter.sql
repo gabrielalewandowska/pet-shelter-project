@@ -9,7 +9,7 @@ CREATE TABLE pets (
   age INT,
   size VARCHAR(255),
   sex VARCHAR(255),
-  adoptable BOOLEAN,
+  status VARCHAR(255),
   admission_date VARCHAR(255),
   photo VARCHAR(255)
 );
