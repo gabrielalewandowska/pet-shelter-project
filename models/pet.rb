@@ -62,4 +62,27 @@ class Pet
     return pet_object
   end
 
+  def self.adoptable
+    sql = "SELECT * FROM pets WHERE status = $1;"
+    value = ["waiting for adoption"]
+    pets_hash = SqlRunner.run(sql, value)
+    pet_objects = pets_hash.map {|hash| Pet.new(hash)}
+    return pet_objects
+  end
+
+  def self.training_or_vet
+    sql = "SELECT * FROM pets where status = $1;"
+    value = ["in vet care/ training"]
+    pets_hash = SqlRunner.run(sql, value)
+    pet_objects = pets_hash.map {|hash| Pet.new(hash)}
+    return pet_objects
+  end
+
+  def self.adopted
+    sql = "SELECT * FROM pets where status = $1;"
+    value = ["adopted"]
+    pets_hash = SqlRunner.run(sql, value)
+    pet_objects = pets_hash.map {|hash| Pet.new(hash)}
+    return pet_objects
+  end
 end

@@ -40,9 +40,9 @@ Owner.delete_all
     "age" => 5,
     "size" => "large",
     "sex" => "female",
-    "status" => "adopted",
+    "status" => "waiting for adoption",
     "admission_date" => "20-08-2017",
-    "photo" => "/images/dog2.jpeg"
+    "photo" => "/images/dog2.jpg"
     })
 
   dog2.save
@@ -81,7 +81,7 @@ Owner.delete_all
       "age" => 3,
       "size" => "small",
       "sex" => "male",
-      "status" => "in vet care",
+      "status" => "in vet care/ training",
       "admission_date" => "11-08-2017",
       "photo" => "/images/cat3.jpeg"
       })
@@ -110,7 +110,7 @@ Owner.delete_all
       "sex" => "female",
       "status" => "waiting for adoption",
       "admission_date" => "22-08-2017",
-      "photo" => "/images/cat4.jpeg"
+      "photo" => "/images/cat4.jpg"
       })
 
     cat4.save
@@ -136,7 +136,7 @@ Owner.delete_all
       "age" => 1,
       "size" => "small",
       "sex" => "male",
-      "status" => "waiting for adoption",
+      "status" => "in vet care/ training",
       "admission_date" => "01-08-2017",
       "photo" => "/images/cat5.jpeg"
       })
