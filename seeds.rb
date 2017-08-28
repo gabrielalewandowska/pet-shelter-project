@@ -1,4 +1,5 @@
 require_relative("models/pet.rb")
+require_relative("models/owner.rb")
 require ("pry")
 
 Pet.delete_all
@@ -13,7 +14,7 @@ Owner.delete_all
     "sex" => "male",
     "adoptable" => true,
     "admission_date" => "01-08-2017",
-    "photo" => "../public/images/dog1.jpeg"
+    "photo" => "/images/dog1.jpeg"
     })
 
     dog1.save
@@ -25,9 +26,9 @@ Owner.delete_all
     "age" => 3,
     "size" => "small",
     "sex" => "female",
-    "adoptable" => true,
+    "adoptable" => false,
     "admission_date" => "10-08-2017",
-    "photo" => "../public/images/cat1.jpeg"
+    "photo" => "/images/cat1.jpeg"
     })
 
   cat1.save

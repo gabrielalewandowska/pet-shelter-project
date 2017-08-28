@@ -1,0 +1,14 @@
+
+<div class="pet-record-wrapper">
+  <img src="<%= @pet.photo %>" height="150em" width="200em" alt="Animal's photo">
+  <p>
+    Name: <%= @pet.name %> <br>
+    Admission date: <%= @pet.admission_date %> <br>
+    Breed: <%= @pet.breed %> <br>
+    Age: <%= @pet.age %> <br>
+    Size: <%= @pet.size %> <br>
+    Sex: <%= @pet.sex %> <br>
+    Adoptable: <%= @pet.adoptable ? "yes" : "in training/ vet care" %>
+  </p>
+
+</div>

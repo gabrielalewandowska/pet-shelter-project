@@ -1,9 +1,7 @@
-<a href="/animals/adoptable">Ready for adoption</a>
-<a href="#">In training/ vet care</a>
+<h1>All animals ready for adoption:</h1>
 
-<h1>Our Animals:</h1>
+<% for pet in @pets do %>
 
-<% for animal in @animals do %>
 <a href="/animals/<%= animal.id %>">
 <img src="<%= animal.photo %>" height="150em" width="150em" alt="Animal's photo">
 </a>

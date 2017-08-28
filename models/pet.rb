@@ -6,14 +6,14 @@ class Pet
   attr_reader(:id)
   attr_accessor(:name, :species, :breed, :age, :size, :sex, :adoptable, :admission_date, :photo)
   def initialize(params)
-    @id = params["id"].to_i
+    @id = params["id"].to_i if params["id"]
     @name = params["name"]
     @species = params["species"]
     @breed = params["breed"]
     @age = params["age"].to_i
     @size = params["size"]
     @sex = params["sex"]
-    @adoptable = params["adoptable"]
+    @adoptable = params["adoptable"] == "t"
     @admission_date = params["admission_date"]
     @photo = params["photo"]
   end
@@ -57,8 +57,9 @@ class Pet
   def self.find(id)
     sql = "SELECT * FROM pets WHERE id = $1;"
     value = [id]
-    pet_hash = SqlRunner.run(sql, value)
-    pet_object = Pet.new(pet_hash.first)
+    pet_hash = SqlRunner.run(sql, value).first
+    pet_object = Pet.new(pet_hash) if pet_hash
     return pet_object
   end
+
 end

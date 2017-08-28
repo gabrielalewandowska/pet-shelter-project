@@ -26,5 +26,15 @@ post '/animals' do
 end
 
 get '/animals/:id' do
-  @pet = 
+  @pet = Pet.find(params[:id])
+  erb(:show)
 end
+
+get '/owners' do
+  @owners = Owner.all
+  erb(:owners)
+end
+# get '/animals/adoptable' do
+#   @pets = Pet.all
+#   erb(:adoptable)
+# end

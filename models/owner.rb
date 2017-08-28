@@ -37,7 +37,7 @@ class Owner
     SqlRunner.run(sql, value)
   end
 
-  def delete_all
+  def self.delete_all
     sql = "DELETE FROM owners;"
     SqlRunner.run(sql, [])
   end
@@ -69,5 +69,13 @@ class Owner
     owner_hash = SqlRunner.run(sql, value)
     owner_object = Owner.new(owner_hash.first)
     return owner_object
+  end
+
+  def find_pet_name(pet_id)
+    sql = "SELECT * FROM pets WHERE id = $1;"
+    value = [pet_id]
+    pet_hash = SqlRunner.run(sql, value)
+    pet_object = Pet.new(pet_hash.first)
+    return pet_object.name
   end
 end

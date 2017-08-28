@@ -1,0 +1,12 @@
+<h1>People who have already adopted any of our animals or are still looking for one: </h1>
+
+<div class="owner-record-wrapper">
+
+  <% for owner in @owners do %>
+
+  <p>Name: <%= owner.first_name %> <%= owner.last_name %></p>
+  <p>Address: <%= owner.address %></p>
+  <p>Pets: <a href="/animals/<%=owner.pet_id%>"><%= owner.find_pet_name(owner.pet_id) %> </a> </p>
+
+  <% end %>
+</div>
