@@ -1,18 +1,26 @@
+<div class="menu">
+
 <a href="/animals/adoptable">Ready for adoption</a>
 <a href="/animals/training_or_vet">In training/ vet care</a>
 <a href="/animals/adopted">Adopted</a><br/>
 <a href="/animals/new">Add a pet record</a>
 
+</div>
+
 <h1>Our Animals:</h1>
 
-<% for animal in @animals do %>
-<a href="/animals/<%= animal.id %>">
-<img src="<%= animal.photo %>" height="150em" width="150em" alt="Animal's photo">
-</a>
-<p>Name: <%= animal.name %></p>
-<p>Admission date: <%= animal.admission_date %></p>
+<div class="thumbnail-gallery">
 
-<hr/>
+    <% for animal in @animals do %>
+    <div class="thumbnail-gallery-item">
+      <a href="/animals/<%= animal.id %>">
+        <img src="<%= animal.photo %>" alt="Animal's photo" class = "thumbnail-gallery-photo">
+      </a>
+      <div class="thumbnail-gallery-caption">
+        <p> <%= animal.name %></p>
+        <p><%= animal.admission_date %></p>
+    </div>
+    </div>
+    <% end %>
 
-
-<% end %>
+</div>

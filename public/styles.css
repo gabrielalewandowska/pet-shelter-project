@@ -1,0 +1,96 @@
+.body {
+  margin: 2em;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-box {
+  background-color: #4ABDAC;
+  border-radius: 1em;
+  margin-bottom: 1em;
+  border: 0.01em solid black;
+}
+
+.banner {
+  font-size: 5em;
+  color: white;
+  margin: 0.5em;
+}
+
+.navigation {
+  margin: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+}
+
+.btn {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: 0.01em solid black;
+}
+
+.btn:hover {
+  padding: 0.7em;
+}
+
+#search-btn {
+  background-color: #F7B733;
+}
+
+#animals-btn {
+  background-color: #FC4A14;
+}
+
+#owners-btn {
+  background-color: #4ABDAC;
+}
+
+#adoption-btn {
+  background-color: #DFDCE3;
+}
+
+.contents{
+
+}
+
+.thumbnail-gallery {
+  display: inline-flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+
+.thumbnail-gallery-item {
+  padding: 0.2em;
+  border: 0.01em solid black;
+  margin: auto;
+  margin-bottom: 2em;
+  width: 25%;
+
+}
+
+.thumbnail-gallery-photo {
+  height: 15em;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+
+.thumbnail-gallery-caption {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin: 1em;
+}
