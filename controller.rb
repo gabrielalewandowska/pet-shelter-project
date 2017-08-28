@@ -20,9 +20,22 @@ get '/animals/new' do
 end
 
 post '/animals' do
-  @pet = Pet.new(params)
-  @pet.save
+  pet = Pet.new(params)
+  pet.save
   erb(:create)
+end
+
+get '/adoption' do
+  @pets = Pet.adoptable
+  erb(:adoption)
+end
+
+post '/adoption' do
+  owner = Owner.new(params)
+  owner.save
+  pet = Pet.find(params['pet_id'])
+  pet.update_status("adopted")
+  redirect to("/owners")
 end
 
 get '/animals/adoptable' do

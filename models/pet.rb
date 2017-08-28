@@ -48,6 +48,12 @@ class Pet
     SqlRunner.run(sql, values)
   end
 
+  def update_status(new_status)
+    sql = "UPDATE pets SET (status) = ($1) WHERE id = $2;"
+    values = [new_status, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def delete
     sql = "DELETE FROM pets WHERE id = $1;"
     value = [@id]
