@@ -1,14 +1,19 @@
 
 <div class="pet-record-wrapper">
-  <img src="<%= @pet.photo %>" height="150em" width="200em" alt="Animal's photo">
-  <p>
-    Name: <%= @pet.name %> <br>
-    Admission date: <%= @pet.admission_date %> <br>
-    Breed: <%= @pet.breed %> <br>
-    Age: <%= @pet.age %> <br>
-    Size: <%= @pet.size %> <br>
-    Sex: <%= @pet.sex %> <br>
-    Status: <%= @pet.status %> 
-  </p>
-
-</div>
+  <div class="thumbnail-gallery">
+    <div class="thumbnail-gallery-item-individual">
+      <img src="<%= @pet.photo %>" height="150em" width="200em" alt="Animal's photo" class = "thumbnail-gallery-photo">
+        <div class="thumbnail-gallery-caption">
+          <p>
+            Name: <%= @pet.name %> <br>
+            Admission date: <%= @pet.admission_date %> <br>
+            Breed: <%= @pet.breed %> <br>
+            Age: <%= @pet.age %> <br>
+            Size: <%= @pet.size %> <br>
+            Sex: <%= @pet.sex %> <br>
+            Status: <%= @pet.status %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>

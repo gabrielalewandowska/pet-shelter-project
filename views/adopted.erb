@@ -1,14 +1,15 @@
 <h1>Animals already adopted:</h1>
+<div class="thumbnail-gallery">
+  <% for pet in @pets do %>
+    <div class="thumbnail-gallery-item">
+      <a href="/animals/<%= pet.id %>">
+      <img src="<%= pet.photo %>" height="150em" width="150em" alt="Animal's photo" class = "thumbnail-gallery-photo">
+      </a>
+      <div class="thumbnail-gallery-caption">
+        <p><%= pet.name %></p>
+        <p><%= pet.admission_date %></p>
+      </div>
+    </div>
+  <% end %>
 
-<% for pet in @pets do %>
-
-<a href="/animals/<%= pet.id %>">
-<img src="<%= pet.photo %>" height="150em" width="150em" alt="Animal's photo">
-</a>
-<p>Name: <%= pet.name %></p>
-<p>Admission date: <%= pet.admission_date %></p>
-
-<hr/>
-
-
-<% end %>
+</div>

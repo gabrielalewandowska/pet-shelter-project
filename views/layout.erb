@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>The Scottish Animal Shelter Database</title>
-     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <div class="grid">
@@ -16,14 +16,25 @@
       </div>
 
       <div class="grid-row">
-        <div class="navigation">
           <nav>
-            <a href="#" id="search-btn" class= "btn">Search Database</a>
-            <a href="/animals" id="animals-btn" class= "btn">Animals</a>
-            <a href="/owners" id="owners-btn" class= "btn">Owners</a>
-            <a href="/adoption" id="adoption-btn" class= "btn">New adoption</a>
+            <ul>
+            <li><a href="#">Search Database</a></li>
+
+            <li class="dropdown"><a href="/animals" class="dropbtn">Animals</a>
+
+              <div class="dropdown-content">
+                <a href="/animals/adoptable">Ready for adoption</a>
+                <a href="/animals/training_or_vet">In training/ vet care</a>
+                <a href="/animals/adopted">Adopted</a>
+                <a href="/animals/new">Add</a>
+              </div>
+            </li>
+
+            <li><a href="/owners">Owners</a></li>
+            <li><a href="/adoption" id="adopt-btn">New adoption</a></li>
+          </ul>
           </nav>
-        </div>
+
 
         <div class="contents">
           <%= yield %>
