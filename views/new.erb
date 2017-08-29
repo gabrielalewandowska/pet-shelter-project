@@ -32,13 +32,14 @@
        </select><br/>
 
    <label for="adoptable-select">Adoptable:</label><br/>
-       <select id="adoptable-select" name="adoptable">
-         <option value="true">yes</option>
-         <option value="false">in training/ vet care</option>
+       <select id="adoptable-select" name="status">
+         <option value="waiting for adoption">waiting for adoption</option>
+         <option value="in vet care/ training">in vet care/ training</option>
+         <option value="adopted">adopted</option>
        </select><br/>
 
    <label for="admission_date">Admission date:</label><br/>
-   <input id="admission_date" type="text" name="admission_date" placeholder="dd-mm-yyyy"/><br/>
+   <input id="admission_date" type="date" name="admission_date"/><br/>
 
     <label for="photo">Photo url:</label><br/>
     <input id="photo" type="text" name="photo"/><br/>

@@ -48,10 +48,16 @@ h1 {
 .thumbnail-gallery-item-individual {
   padding: 0.2em;
   border: 0.01em solid black;
-  /*margin: auto;*/
-  /*margin-bottom: 2em;*/
-  width: 50%;
-  height: 70%;
+  margin-top: 2em;
+  width: 35%;
+  height: 50%;
+}
+
+.thumbnail-gallery-photo-individual {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
 }
 
 .thumbnail-gallery-photo {
@@ -140,17 +146,7 @@ nav {
   margin:auto;
 }
 
-input[type=text], select {
-    width: 100%;
-    padding: 0.2em;
-    margin: 0.5em;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=number], select {
+input[type=text], input[type=number], input[type=date], select {
     width: 100%;
     padding: 0.2em;
     margin: 0.5em;
@@ -171,6 +167,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
+
 input[type=submit]:hover {
     background-color: #45a049;
 }
@@ -178,4 +175,22 @@ input[type=submit]:hover {
 label {
   margin: 0.8em;
   font-size: 1em;
+}
+
+
+.column-right{
+  margin: 2em;
+  width: 20em;
+}
+
+.show {
+  display: flex;
+}
+
+.show .thumbnail-gallery-item-individual {
+  width: 400px;
+}
+
+#delete-btn {
+  background-color: #FC4A14;
 }

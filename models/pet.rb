@@ -44,7 +44,7 @@ class Pet
     sql = "UPDATE pets SET
     (name, species, breed, age, size, sex, status, admission_date, photo)
     = ($1, $2, $3, $4, $5, $6, $7, $8, $9) WHERE id= $10;"
-    values = [@name, @species, @breed, @age, @size, @sex, @status, @admission_date, @photo]
+    values = [@name, @species, @breed, @age, @size, @sex, @status, @admission_date, @photo, @id]
     SqlRunner.run(sql, values)
   end
 

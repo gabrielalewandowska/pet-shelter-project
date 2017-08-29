@@ -1,24 +1,25 @@
 <h1>New adoption</h1>
+<div class="form-wrapper">
+    <form action="/adoption" method="POST">
 
-<form action="/adoption" method="POST">
+      <label for="first-name">First name:</label>
+      <input type="text" name="first_name" id="first-name-field"/>
 
-  <label for="first-name">First name:</label>
-  <input type="text" name="first_name" id="first-name-field"/>
+      <label for="last-name">Last name:</label>
+      <input type="text" name="last_name" id="last-name-field"/>
 
-  <label for="last-name">Last name:</label>
-  <input type="text" name="last_name" id="last-name-field"/>
+      <label for="address">Address:</label>
+      <input type="text" name="address" id="address-field"/>
 
-  <label for="address">Address:</label>
-  <input type="text" name="address" id="address-field"/>
-
-  <label for="pet_id">Adopted pet:</label>
-  <select id="pet-select" name="pet_id">
-    <% for pet in @pets do %>
-    <option value="<%= pet.id %>"> <%= pet.name %> </option>
-    <% end %>
-  </select>
+      <label for="pet_id">Adopted pet:</label>
+      <select id="pet-select" name="pet_id">
+        <% for pet in @pets do %>
+        <option value="<%= pet.id %>"> <%= pet.name %> </option>
+        <% end %>
+      </select>
 
 
- <input type="submit" value="Add Record">
+     <input type="submit" value="Add Record">
 
-</form>
+    </form>
+</div>

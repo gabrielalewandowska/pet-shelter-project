@@ -13,7 +13,7 @@ Owner.delete_all
     "size" => "small",
     "sex" => "male",
     "status" => "waiting for adoption",
-    "admission_date" => "01-08-2017",
+    "admission_date" => "2017-08-01",
     "photo" => "/images/dog1.jpeg"
     })
 
@@ -27,7 +27,7 @@ Owner.delete_all
     "size" => "small",
     "sex" => "female",
     "status" => "adopted",
-    "admission_date" => "10-08-2017",
+    "admission_date" => "2017-08-10",
     "photo" => "/images/cat1.jpeg"
     })
 
@@ -41,7 +41,7 @@ Owner.delete_all
     "size" => "large",
     "sex" => "female",
     "status" => "waiting for adoption",
-    "admission_date" => "20-08-2017",
+    "admission_date" => "2017-08-20",
     "photo" => "/images/dog2.jpg"
     })
 
@@ -55,7 +55,7 @@ Owner.delete_all
     "size" => "small",
     "sex" => "male",
     "status" => "waiting for adoption",
-    "admission_date" => "15-08-2017",
+    "admission_date" => "2017-08-15",
     "photo" => "/images/cat2.jpeg"
     })
   cat2.save
@@ -68,7 +68,7 @@ Owner.delete_all
     "size" => "large",
     "sex" => "male",
     "status" => "waiting for adoption",
-    "admission_date" => "26-08-2017",
+    "admission_date" => "2017-08-26",
     "photo" => "/images/dog3.jpeg"
     })
 
@@ -82,7 +82,7 @@ Owner.delete_all
       "size" => "small",
       "sex" => "male",
       "status" => "in vet care/ training",
-      "admission_date" => "11-08-2017",
+      "admission_date" => "2017-08-11",
       "photo" => "/images/cat3.jpeg"
       })
 
@@ -96,7 +96,7 @@ Owner.delete_all
       "size" => "small",
       "sex" => "male",
       "status" => "adopted",
-      "admission_date" => "16-08-2017",
+      "admission_date" => "2017-08-16",
       "photo" => "/images/dog4.jpeg"
       })
       dog4.save
@@ -109,7 +109,7 @@ Owner.delete_all
       "size" => "small",
       "sex" => "female",
       "status" => "waiting for adoption",
-      "admission_date" => "22-08-2017",
+      "admission_date" => "2017-08-09",
       "photo" => "/images/cat4.jpg"
       })
 
@@ -123,7 +123,7 @@ Owner.delete_all
       "size" => "medium",
       "sex" => "male",
       "status" => "adopted",
-      "admission_date" => "20-07-2017",
+      "admission_date" => "2017-07-30",
       "photo" => "/images/dog5.jpeg"
       })
 
@@ -137,7 +137,7 @@ Owner.delete_all
       "size" => "small",
       "sex" => "male",
       "status" => "in vet care/ training",
-      "admission_date" => "01-08-2017",
+      "admission_date" => "2017-07-11",
       "photo" => "/images/cat5.jpeg"
       })
     cat5.save

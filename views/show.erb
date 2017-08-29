@@ -1,19 +1,31 @@
-
-<div class="pet-record-wrapper">
-  <div class="thumbnail-gallery">
-    <div class="thumbnail-gallery-item-individual">
-      <img src="<%= @pet.photo %>" height="150em" width="200em" alt="Animal's photo" class = "thumbnail-gallery-photo">
-        <div class="thumbnail-gallery-caption">
-          <p>
-            Name: <%= @pet.name %> <br>
-            Admission date: <%= @pet.admission_date %> <br>
-            Breed: <%= @pet.breed %> <br>
-            Age: <%= @pet.age %> <br>
-            Size: <%= @pet.size %> <br>
-            Sex: <%= @pet.sex %> <br>
-            Status: <%= @pet.status %>
-          </p>
+<div class="show">
+  <div class="column-left">
+    <div class="pet-record-wrapper">
+      <div class="thumbnail-gallery-individual">
+        <div class="thumbnail-gallery-item-individual">
+          <img src="<%= @pet.photo %>" height="150em" width="200em" alt="Animal's photo" class = "thumbnail-gallery-photo">
+            <div class="thumbnail-gallery-caption">
+              <p>
+                Name: <%= @pet.name %> <br>
+                Admission date: <%= @pet.admission_date %> <br>
+                Breed: <%= @pet.breed %> <br>
+                Age: <%= @pet.age %> <br>
+                Size: <%= @pet.size %> <br>
+                Sex: <%= @pet.sex %> <br>
+                Status: <%= @pet.status %>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+  <div class="column-right">
+      <form action = "/animals/<%= @pet.id %>/edit" method = "GET">
+        <input type = "submit" value = "Edit record">
+
+      <form action = "/animals/<%= @pet.id %>/delete" method = "POST" id="delete-btn">
+        <input type = "submit" value = "Delete record">
+    </form>
   </div>
+</div>

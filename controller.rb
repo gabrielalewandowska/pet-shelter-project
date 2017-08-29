@@ -53,6 +53,23 @@ get '/animals/adopted' do
   erb(:adopted)
 end
 
+get '/animals/:id/edit' do
+  @pet = Pet.find(params[:id])
+  erb(:edit)
+end
+
+post '/animals/:id/delete' do
+  @pet = Pet.find(params[:id])
+  @pet.delete
+  redirect to ("/animals")
+end
+
+post '/animals/:id' do
+  pet = Pet.new(params)
+  pet.update
+  redirect to('/animals')
+end
+
 get '/animals/:id' do
   @pet = Pet.find(params[:id])
   erb(:show)
