@@ -1,0 +1,14 @@
+<div class="thumbnail-gallery">
+
+    <% for pet in @pets do %>
+    <div class="thumbnail-gallery-item">
+      <a href="/animals/<%= pet.id %>">
+        <img src="<%= pet.photo %>" alt="Animal's photo" class = "thumbnail-gallery-photo">
+      </a>
+      <div class="thumbnail-gallery-caption">
+        <p> <%= pet.name %></p>
+        <p><%= pet.admission_date %></p>
+    </div>
+    </div>
+    <% end %>
+</div>

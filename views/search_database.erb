@@ -1,0 +1,41 @@
+<h1>Search for a pet:</h1>
+
+<div class="form-wrapper">
+  <form action="/search" method="POST">
+
+    <label for="species-select">Species:</label><br/>
+    <select id="species-select" name="species">
+      <option value="cat">cat</option>
+      <option value="dog">dog</option>
+    </select><br/>
+
+    <label for="breed-field">Breed:</label><br/>
+     <input id="breed-field" type="text" name="breed"><br/>
+
+    <label for="age">Age:</label><br/>
+    <input id="age" type="number" name="age"/><br/>
+
+    <label for="size-select">Size:</label><br/>
+       <select id="size-select" name="size">
+         <option value="small">small</option>
+         <option value="medium">medium</option>
+         <option value="large">large</option>
+       </select><br/>
+
+     <label for="sex-select">Sex:</label><br/>
+       <select id="sex-select" name="sex">
+         <option value="male">male</option>
+         <option value="female">female</option>
+       </select><br/>
+
+   <label for="adoptable-select">Adoptable:</label><br/>
+       <select id="adoptable-select" name="status">
+         <option value="waiting for adoption">waiting for adoption</option>
+         <option value="in vet care/ training">in vet care/ training</option>
+         <option value="adopted">adopted</option>
+       </select><br/>
+
+    <input type="submit" value="Search">
+
+  </form>
+</div>

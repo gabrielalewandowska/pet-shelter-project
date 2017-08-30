@@ -1,5 +1,6 @@
 require_relative( '../db/sql_runner' )
 require_relative("owner")
+require('pry')
 
 class Pet
 
@@ -77,7 +78,7 @@ class Pet
   end
 
   def self.training_or_vet
-    sql = "SELECT * FROM pets where status = $1;"
+    sql = "SELECT * FROM pets WHERE status = $1;"
     value = ["in vet care/ training"]
     pets_hash = SqlRunner.run(sql, value)
     pet_objects = pets_hash.map {|hash| Pet.new(hash)}
@@ -85,9 +86,33 @@ class Pet
   end
 
   def self.adopted
-    sql = "SELECT * FROM pets where status = $1;"
+    sql = "SELECT * FROM pets WHERE status = $1;"
     value = ["adopted"]
     pets_hash = SqlRunner.run(sql, value)
+    pet_objects = pets_hash.map {|hash| Pet.new(hash)}
+    return pet_objects
+  end
+
+  def self.search_database(params)
+    sql = "
+      SELECT * FROM pets
+      WHERE species=$1
+        AND breed=$2
+        AND age=$3
+        AND size=$4
+        AND sex=$5
+        AND status=$6;"
+
+    values = [
+      params['species'],
+      params['breed'],
+      params['age'].to_i,
+      params['size'],
+      params['sex'],
+      params['status']
+    ]
+    
+    pets_hash = SqlRunner.run(sql, values)
     pet_objects = pets_hash.map {|hash| Pet.new(hash)}
     return pet_objects
   end

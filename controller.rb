@@ -9,6 +9,19 @@ get '/' do
   erb(:home)
 end
 
+get '/search_database' do
+  erb(:search_database)
+end
+
+post '/search' do
+  @pets = Pet.search_database(params)
+  if @pets == []
+     erb(:not_found)
+   else
+     erb(:search_result)
+ end
+end
+
 get '/animals' do
   @animals = Pet.all
   erb(:animals)
