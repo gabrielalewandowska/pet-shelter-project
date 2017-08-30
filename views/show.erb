@@ -1,5 +1,6 @@
 <div class="show">
-  <div class="column-left">
+
+
     <div class="pet-record-wrapper">
       <div class="thumbnail-gallery-individual">
         <div class="thumbnail-gallery-item-individual">
@@ -17,15 +18,16 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
 
-  <div class="column-right">
-      <form action = "/animals/<%= @pet.id %>/edit" method = "GET">
-        <input type = "submit" value = "Edit record">
 
-      <form action = "/animals/<%= @pet.id %>/delete" method = "POST" id="delete-btn">
-        <input type = "submit" value = "Delete record">
-    </form>
-  </div>
+    <div class="edit-submit-btns">
+      <form action = "/animals/<%= @pet.id %>/edit" method = "GET">
+        <input type = "submit" value = "edit    " id="edit-btn">
+
+      <form action = "/animals/<%= @pet.id %>/delete" method = "POST">
+        <input type = "submit" value = "delete       " id="delete-btn">
+      </form>
+    </div>
+
 </div>
