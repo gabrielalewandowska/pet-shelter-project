@@ -1,6 +1,5 @@
 require_relative("models/pet.rb")
 require_relative("models/owner.rb")
-require ("pry")
 
 Pet.delete_all
 Owner.delete_all
@@ -169,5 +168,4 @@ Owner.delete_all
 
     owner3.save
 
-binding.pry
 nil

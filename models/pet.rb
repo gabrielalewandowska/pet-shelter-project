@@ -1,6 +1,5 @@
 require_relative( '../db/sql_runner' )
 require_relative("owner")
-require('pry')
 
 class Pet
 
@@ -111,7 +110,7 @@ class Pet
       params['sex'],
       params['status']
     ]
-    
+
     pets_hash = SqlRunner.run(sql, values)
     pet_objects = pets_hash.map {|hash| Pet.new(hash)}
     return pet_objects

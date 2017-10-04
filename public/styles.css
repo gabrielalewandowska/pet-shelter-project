@@ -7,7 +7,6 @@ body {
 a {
   text-decoration: none;
   color: #DBB846;
-  /*#f3cc4e;*/
 }
 
 a:hover {
@@ -181,8 +180,6 @@ hr {
 
 #delete-btn {
   background-color: #C62F37;
-  /*#9D2F37;*/
-  /*border: 1px black solid;*/
   text-align: left;
   max-width: 10em;
   padding-left: 1em;
