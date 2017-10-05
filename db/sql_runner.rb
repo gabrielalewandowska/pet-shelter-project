@@ -5,7 +5,7 @@ class SqlRunner
   def self.run( sql, values )
     begin
       db = PG.connect({
-        dbname: 'animal-shelter-database',
+        dbname: 'd4vm38o093c1pd',
         host: 'ec2-54-163-237-25.compute-1.amazonaws.com',
         port: 5432,
         user: 'hknzviiixxtnbc',
