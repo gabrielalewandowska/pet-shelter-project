@@ -17,3 +17,6 @@ Possible Extensions:
 - Have separate pages for animals ready for adoption and ones still in training/vet care
 - Search for animals by breed/type
 - Any other ideas you might come up with
+
+----
+In future I would like make the website more responsive to understand the principles of responsive design without Bootstrap better.
