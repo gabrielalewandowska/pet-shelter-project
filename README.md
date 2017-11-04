@@ -1,6 +1,9 @@
+# Animal Shelter
+
+My first project at CodeClan.
 View the app on heroku: https://animal-shelter-database.herokuapp.com/
 
-# Project Brief: Animal Shelter
+## Project Brief
 
 The Scottish Animal Shelter accepts orphaned or stray animals and takes care of them until they can be adopted by a new owner. The shelter has a list of potential new owners for the animals. Animals may take a while to be trained up and made healthy before being available for adoption.
 
@@ -21,4 +24,4 @@ They are looking for a management system to keep track of their animals and owne
 - Any other ideas you might come up with
 
 ----
-Due to time constraints I was not able to make the website responsive, so if I have more time to work on this project in future, I would like to improve the layout using CSS Flex Box or grid system.
+Since I had only six days to finish the project, I was not able to make the website responsive, which is something I would like to improve in future.
