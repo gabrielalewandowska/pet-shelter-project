@@ -1,6 +1,7 @@
 # Animal Shelter
 
 My first individual project at CodeClan.
+
 View the app on heroku: https://animal-shelter-database.herokuapp.com/
 
 ## Project Brief
